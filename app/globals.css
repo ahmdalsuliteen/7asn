@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0b2f46;
+  --gold: #e2a93a;
+  --accent-red: #c8102e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #0b2f46;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-[#E28576] px-6 py-3 text-sm font-medium text-white shadow-sm transition  focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-[#E28576] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#E28576] hover:text-white;
+  }
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .heading-xl {
+    @apply text-4xl font-extrabold tracking-tight text-[#70423F]  md:text-5xl lg:text-6xl;
+  }
+  .heading-lg {
+    @apply text-3xl font-extrabold tracking-tight text-[#70423F]  md:text-4xl;
+  }
+  .heading-md {
+    @apply text-2xl font-bold tracking-tight text-[#70423F]  md:text-3xl;
+  }
+  .eyebrow {
+    @apply text-sm font-bold uppercase tracking-widest text-accent-red;
+  }
+}
